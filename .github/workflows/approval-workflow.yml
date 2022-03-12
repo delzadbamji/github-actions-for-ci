@@ -1,1 +1,2 @@
 name: GitHub Learn Approval Workflow
+on: pull_request_review

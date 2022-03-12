@@ -1,5 +1,5 @@
-name: GitHub Learn Approval Workflow
 on: pull_request_review
+name: Label approved pull requests
 jobs:
   labelWhenApproved:
     name: Label when approved
@@ -8,5 +8,7 @@ jobs:
     - name: Label when approved
       uses: pullreminders/label-when-approved-action@master
       env:
-        APPROVALS: "1"
-
+        APPROVALS: "2"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "approved"
+        REMOVE_LABEL: "awaiting%20review"
